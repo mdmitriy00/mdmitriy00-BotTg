@@ -33,4 +33,4 @@ class ValueConverter():
         r = requests.get(f'https://v6.exchangerate-api.com/v6/30e0af3c5b97c935e6e51347/pair/{quote_ticker}/{base_ticker}')
         total_base = json.loads(r.content)['conversion_rate']
 
-        return total_base
+        return total_base * amount
